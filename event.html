@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>ISTE Event</title>
+    <style>
+        /* Styling the body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Header styling */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Countdown timer styling */
+        .countdown {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #ffcc00;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Styling section, giving background image and dimensions */
+        section {
+            width: 100%;
+            height: calc(100vh - 160px); /* Adjust for header and footer */
+            background: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+            display: flex;
+        }
+
+        /* Styling the left floating section */
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* Styling the background of left floating section */
+        .leftBox .content {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            transition: .5s;
+        }
+
+        /* Styling the hover effect of left floating section */
+        .leftBox .content:hover {
+            background: #e91e63;
+        }
+
+        /* Styling the header of left floating section */
+        .leftBox .content h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Styling the paragraph of left floating section */
+        .leftBox .content p {
+            margin: 10px 0 0;
+            padding: 0;
+        }
+
+        /* Styling the three events section */
+        .events {
+            width: 50%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Styling the links of the events section */
+        .events ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Styling the lists of the event section */
+        .events ul li {
+            background: #fff;
+            box-sizing: border-box;
+            height: 200px;
+            margin: 15px 0;
+            display: flex;
+        }
+
+        /* Styling the time class of events section */
+        .events ul li .time {
+            padding: 20px;
+            background: #262626;
+            box-sizing: border-box;
+            width: 30%;
+            text-align: center;
+            transition: .5s;
+        }
+
+        /* Styling the hover effect of events section */
+        .events ul li:hover .time {
+            background: #e91e63;
+        }
+
+        /* Styling the header of time class of events section */
+        .events ul li .time h2 {
+            margin: 0;
+            color: #fff;
+            font-size: 60px;
+            line-height: 30px;
+        }
+
+        /* Styling the texts of time class of events section */
+        .events ul li .time h2 span {
+            font-size: 30px;
+        }
+
+        /* Styling the details class of events section */
+        .events ul li .details {
+            padding: 20px;
+            box-sizing: border-box;
+            width: 70%;
+        }
+
+        /* Styling the header of the details class of events section */
+        .events ul li .details h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+        }
+
+        /* Styling the lists of details class of events section */
+        .events ul li .details p {
+            margin: 10px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        /* Styling the links of details class of events section */
+        .events ul li .details a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1.5px solid #262626;
+            margin-top: 8px;
+            font-size: 18px;
+            transition: .5s;
+        }
+
+        /* Styling the details class's hover effect */
+        .events ul li .details a:hover {
+            background: #e91e63;
+            color: #fff;
+            border-color: #e91e63;
+        }
+    </style>
+    <script>
+        // Countdown timer function
+        function startCountdown() {
+            const eventDate = new Date('2024-09-30T00:00:00').getTime();
+            const countdownElement = document.getElementById('countdown');
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    countdownElement.innerHTML = "Event has started!";
+                }
+            }, 1000);
+        }
+
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>ISTE Event</h1>
+        <div class="countdown" id="countdown"></div>
+        <nav>
+            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+            <a href="event.html" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
+            <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
+            <li><a href="register.html">Register</a></li>
+        </nav>
+    </header>
+
+    <section>
+        <div class="leftBox">
+            <div class="content">
+                <h1>Welcome to the ISTE Event</h1>
+                <p>
+                    Join us for the ISTE Annual Conference, where educators, researchers, and industry leaders come together to explore the latest in technology-enhanced education. This event offers a platform for sharing knowledge, discussing innovative ideas, and networking with peers from across the country. 
+                </p>
+                <p>
+                    With keynote speakers, interactive workshops, and panel discussions, participants will gain valuable insights into the future of education and technology. Don’t miss out on this opportunity to expand your professional network and enhance your teaching practices!
+                </p>
+            </div>
+        </div>
+        <div class="events">
+            <ul>
+                <li>
+                    <div class="time">
+                        <h2>15 <br><span>March</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>Keynote Speech by Dr. Jane Doe</h3>
+                        <p>Join us for an inspiring keynote address from Dr. Jane Doe, a renowned expert in educational technology.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">
+                        <h2>27 <br><span>May</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>Workshop on Effective Teaching Strategies</h3>
+                        <p>Participate in this hands-on workshop designed to equip educators with effective teaching strategies.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">
+                        <h2>12 <br><span>August</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>Panel Discussion: The Future of Education</h3>
+                        <p>Join a panel of experts as they discuss the future of education in a technology-driven world.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="text-white body-font bg-gray-900">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </a>
+            <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 ISTE Club — 
+                <a href="https://twitter.com/knyttneve" class="text-white ml-1" rel="noopener noreferrer" target="_blank">@iste.co.in</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+    
+</body>
+</html>

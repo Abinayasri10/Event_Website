@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ISTE Event</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://media.licdn.com/dms/image/v2/C561BAQE-51J-8KkMZg/company-background_10000/company-background_10000/0/1584559866970/eventscom_cover?e=2147483647&v=beta&t=3bktbE7ts5aNwH8XEUM5rW0G2aMbuQ1b2dHBVQgZqmA');
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .contacts {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            margin-bottom: 30px;
+        }
+        .text-content h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 28px;
+            color: #4b3f8d;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 30px;
+            color: #6e7fd1;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover {
+            color: #4b3f8d;
+            transform: scale(1.2);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f7f7f7;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #6e7fd1;
+            outline: none;
+        }
+        form button {
+            padding: 15px;
+            background-color: #4b3f8d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        form button:hover {
+            background-color: #6e7fd1;
+            transform: translateY(-2px);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-gray-900 text-white">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <img src="https://i.pinimg.com/originals/01/c2/ca/01c2caba61ae08ccba4b14037dfd11d6.png" alt="Learning Hub Logo" class="w-10 h-10">
+                <div class="text-2xl font-bold">ISTE-KEC</ISTE-KEC></div>
+            </div>
+            <!-- Navigation and Search Bar -->
+            <div class="flex items-center space-x-4">
+                <nav class="space-x-4 hidden md:flex">
+                    <a href="index.html" class="hover:text-pink-500">Home</a>
+                    <li><a href="about.html">About us</a></li>
+                    <a href="event.html" class="hover:text-pink-500">Events</a>
+                    <a href="contact.html" class="hover:text-pink-500">Contact</a>
+                    <li><a href="register.html">Register</a></li>
+                </nav>
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="bg-gray-800 text-white border border-gray-700 rounded py-1 px-3 focus:outline-none focus:border-pink-500">
+                    <button class="absolute right-0 top-0 mt-1 mr-1 text-gray-400 hover:text-pink-500">
+                        <svg fill="currentColor" stroke="none" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M10 2a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6zm8.7-1.3a1 1 0 0 1-1.4-1.4l1.3-1.3a1 1 0 0 1 1.4 1.4z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contacts">
+        <div class="container">
+            <div class="text-content">
+                <h2>FACULTY COORDINATORS</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h3>Dr. P. Ravichandran ME., Ph.D.</h3>
+                <h3>Faculty Coordinator</h3>
+                <p><i class='bx bx-phone'></i> +91 9965998989</p>
+            </div>
+            <div class="card">
+                <h3>Mr. A. Ganesh M.Tech</h3>
+                <h3>Faculty Coordinator</h3>
+                <p><i class='bx bx-phone'></i> +91 9578505841</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="text-content">
+                <h2>STUDENT COORDINATORS</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h3>Mr. Ranjithkumar</h3>
+                <h3>Chairperson</h3>
+                <p><i class='bx bx-phone'></i> +91 9597928987</p>
+                <a href="mailto:ranjithrajendran2510@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
+            <div class="card">
+                <h3>Mr. Srinath</h3>
+                <h3>Secretary</h3>
+                <p><i class='bx bx-phone'></i> +91 7010768854</p>
+                <a href="mailto:srinathsri5300@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
+            <div class="card">
+                <h3>Ms. Anusri</h3>
+                <h3>Treasurer</h3>
+                <p><i class='bx bx-phone'></i> +91 9361996123</p>
+                <a href="mailto:anusrivadi04@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="text-content">
+                <h2>Contact Us</h2>
+            </div>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="text-content">
+                <h2>Follow Us</h2>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white body-font bg-gray-900">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </a>
+            <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 ISTE Club — 
+                <a href="https://twitter.com/knyttneve" class="text-white ml-1" rel="noopener noreferrer" target="_blank">@iste.co.in</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-white">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+    
+</body>
+</html>
